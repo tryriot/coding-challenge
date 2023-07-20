@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.1.0",
+    "@prisma/client": "5.0.0",
+    "hono": "^3.3.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@types/node": "^20.4.2",
+    "prisma": "^5.0.0",
+    "tsx": "^3.12.2"
+  }
+}

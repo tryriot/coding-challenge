@@ -1,0 +1,5 @@
+
+
+GET http://locahost:3000/product
+
+GET http://locahost:3000/product/someid

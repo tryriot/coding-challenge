@@ -1,0 +1,5 @@
+node_modules/
+GUIDE.md
+output/
+seed.ts
+.DS_store
