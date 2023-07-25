@@ -4,10 +4,6 @@ After each challenge you can take a 15 minutes break 😇
 
 ## Application debugging (1h15)
 
-After each challenge you can take a 15 minutes break 😇
-
-## Application debugging (1h15)
-
 This an REST API created using Hono : https://hono.dev
 
 This app was created with multiple bugs. Your goal is to find and fix the bugs in the App
@@ -42,10 +38,6 @@ In our database we have the following :
 For more info check the schema in `prisma/schema.prisma`
 
 A customer can purchase a product. This will create a new entry in the purchase table of our database
-
-## Objectives
-Your task is to fix all the bugs so application runs as intended. Here is what is expected from the application to do:
-
 
 ## Objectives
 Your task is to fix all the bugs so application runs as intended. Here is what is expected from the application to do:
