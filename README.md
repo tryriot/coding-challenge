@@ -55,10 +55,10 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 
 1. Ask Louis for an access to the database server.
 2. Your goal is to write an SQL query to find Riot's inactive workspaces, this query should meet the following criteria:
-   - The workspace should not be a paid workspace (stripe_subscription_id != null)
-   - 1 year without a user connecting to the workspace (user_workspaces.user_last_seen)
-   - No phishing emails sent for 1 year (attacks.created_at)
-   - No enrolments created for 1 year (enrolments.created_at)
+   - The workspace should not be a paid workspace (`stripe_subscription_id != null`)
+   - 1 year without a user connecting to the workspace (`user_workspaces.user_last_seen`)
+   - No phishing emails sent for 1 year (`attacks.created_at`)
+   - No enrolments created for 1 year (`enrolments.created_at`)
 3. The output of the exercise should be the SQL query itself.
 
 ## Debrieffing (1 hour)
