@@ -4,6 +4,10 @@ After each challenge you can take a 15 minutes break 😇
 
 ## Application debugging (1h15)
 
+After each challenge you can take a 15 minutes break 😇
+
+## Application debugging (1h15)
+
 This an REST API created using Hono : https://hono.dev
 
 This app was created with multiple bugs. Your goal is to find and fix the bugs in the App
@@ -42,6 +46,10 @@ A customer can purchase a product. This will create a new entry in the purchase 
 ## Objectives
 Your task is to fix all the bugs so application runs as intended. Here is what is expected from the application to do:
 
+
+## Objectives
+Your task is to fix all the bugs so application runs as intended. Here is what is expected from the application to do:
+
 - Get all the products in the database - `GET /products` returns all the products in the database
 - Get a product information using it's id - `GET /products/:id` returns the product specified product - if product not found you should throw an exception
 - Get all the customers in the database - `GET /customers` returns all the products in the database
@@ -51,6 +59,7 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 - Get the statistics:
     - `GET /purchases/stats/products?from=21-04-2023&to=21-05-2023` should return the products purchased between from: Date and to: Date. from should always be before to. Both dates are formatted in 'dd-MM-yyyy' format
     - `GET /purchases/stats/customers` should return the customers who have not made purchases in the past year
+
 
 ## SQL challenge (45 minutes)
 
