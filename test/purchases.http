@@ -1,7 +1,10 @@
-GET http://locahost:3000/purchase
+GET http://0.0.0.0:3000/api/purchases
 
-POST http://locahost:3000/purchase
+
+###
+POST http://0.0.0.0:3000/api/purchases
 Content-Type: application/json
+
 {
     "customerId": "",
     "productId": ""

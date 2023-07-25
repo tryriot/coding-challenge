@@ -1,5 +1,6 @@
 
 
-GET http://locahost:3000/product
+GET http://0.0.0.0:3000/api/products
 
-GET http://locahost:3000/product/someid
+###
+GET http://0.0.0.0:3000/api/products/clkidtczb0ervrgf2s7uyib0a

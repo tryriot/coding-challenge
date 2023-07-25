@@ -1,0 +1,12 @@
+
+
+
+
+GET http://0.0.0.0:3000/api/purchases/stats/products?from='2022-12-09'&to='2023-02-11'
+
+###
+GET http://0.0.0.0:3000/api/purchases/stats/customers
+
+
+###
+GET http://0.0.0.0:4141/

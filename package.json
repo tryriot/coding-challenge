@@ -1,13 +1,17 @@
 {
   "scripts": {
-    "start": "tsx src/index.ts",
+    "start": "run-p start:sync-service start:server",
+    "start:server": "tsx src/index.ts",
+    "start:sync-service": "tsx mock-sync-service.ts",
     "db:generate": "prisma generate",
     "db:push": "prisma db push"
   },
   "dependencies": {
     "@hono/node-server": "^1.1.0",
     "@prisma/client": "5.0.0",
-    "hono": "^3.3.1"
+    "dayjs": "^1.11.9",
+    "hono": "^3.3.1",
+    "ofetch": "^1.1.1"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",

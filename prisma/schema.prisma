@@ -24,7 +24,7 @@ model Product {
     price       Decimal
     createdAt   DateTime   @default(now())
     updatedAt   DateTime   @default(now())
-    pruchase    Purchase[]
+    purchases    Purchase[]
 }
 
 model Purchase {

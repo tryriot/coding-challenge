@@ -1,4 +1,4 @@
-GET http://0.0.0.0:3000/api/customer
+GET http://0.0.0.0:3000/api/customers
 
 ### 
-GET http://0.0.0.0:3000/api/customer/clkbcylxu005nrgk46ea6gitj
+GET http://0.0.0.0:3000/api/customers/clkidtac807fvrgf2wyx58u22
