@@ -1,8 +1,6 @@
 {
   "scripts": {
-    "start": "run-p start:sync-service start:server",
-    "start:server": "tsx src/index.ts",
-    "start:sync-service": "tsx mock-sync-service.ts",
+    "start": "tsx watch src/index.ts",
     "db:generate": "prisma generate",
     "db:push": "prisma db push"
   },
