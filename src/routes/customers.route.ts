@@ -8,18 +8,6 @@ const getCustomers: Handler = (c) => {
   return c.json(products);
 };
 
-const getCustomerById: Handler = (c) => {
-  const id = c.req.param("id");
-  
-  const customer = prisma.customer.findUnique({
-    where: {
-      id: id,
-    },
-  });
-
-  return c.json(customer);
-};
-
 const getCustomerPurchaseHistory: Handler = (c) => {
   const id = c.req.param("id");
   const customer = prisma.customer.findUnique({
@@ -30,13 +18,11 @@ const getCustomerPurchaseHistory: Handler = (c) => {
       purchases: true,
     },
   });
-  
+
   return c.json(customer);
 };
 
-
 router.get("/", getCustomers);
-router.get("/:id", getCustomerById);
 router.get("/:id/purchases", getCustomerPurchaseHistory);
 
 export { router };
