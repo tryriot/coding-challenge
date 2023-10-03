@@ -1,8 +1,8 @@
 # Riot Coding Challenge:
 
-After each challenge you can take a 15 minutes break 😇
+After each challenge you can take a 10 minutes break 😇
 
-## Application debugging (1h15)
+## Application debugging (1h)
 
 This an REST API created using Hono : https://hono.dev
 
@@ -20,7 +20,7 @@ Using node package manager (npm, yarn or pnpm)
 
 Generate prisma client:
 
-`npx run prisma generate`
+`npm db:generate`
 
 And then run :
 
@@ -50,17 +50,15 @@ A customer can purchase a product. This will create a new entry in the purchase 
 
 Your task is to fix all the bugs so application runs as intended. Here is what is expected from the application to do:
 
-- Get all the products in the database - `GET /products` returns all the products in the database
+- Get all the products in the database - `GET /products` returns all the products in the database.
 
-- Get a product information using it's id - `GET /products/:id` returns the product specified product - if product not found you should throw an exception
+- Obtain information about a product using their ID - `GET /products/:id` returns the specific product - If the product is not found, an error is returned with the correct HTTP status code.
 
-- Get all the customers in the database - `GET /customers` returns all the customers in the database
+- Get all the customers in the database - `GET /customers` returns all the customers in the database. (If this were a production API, what suggestions would you add?).
 
-- Get a customer information using it's id - `GET /customers/:id` returns the product specified customer id - if product not found you should throw an exception
+- Make a purchase using `customerId` and `productId` - `POST /purchases` expects a JSON object `{"customerId": "CUSTOMER_ID", "productId": "PRODUCT_ID"}`
 
-- Make a purchase using `customerId` and `productId` - `POST /purchases` expects a JSON object `{"customerId": "customerId", "productId": "productId"}`
-
-- Sync products from a 3rd party service. We want to call a 3rd party service API to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other purchases should not be updated/persisted) using the `POST /sync`
+- Sync products from a 3rd party service. We want to call a 3rd party service API to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other products should not be updated/persisted) using the `POST /sync`
 
 - Get the statistics:
 
@@ -83,6 +81,8 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 - No enrolments created for 1 year (`enrolments.created_at`)
 
 3. The output of the exercise should be the SQL query itself.
+
+4. (Bonus point), return the criterion column that will tell why this workspace should be deleted
 
 ## Debriefing (1 hour)
 
