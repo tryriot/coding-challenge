@@ -20,7 +20,7 @@ Using node package manager (npm, yarn or pnpm)
 
 Generate prisma client:
 
-`npm db:generate`
+`npm run db:generate`
 
 And then run :
 
@@ -58,15 +58,15 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 
 - Make a purchase using `customerId` and `productId` - `POST /purchases` expects a JSON object `{"customerId": "CUSTOMER_ID", "productId": "PRODUCT_ID"}`
 
-- Sync products from a 3rd party service. We want to call a 3rd party service API to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other products should not be updated/persisted) using the `POST /sync`
+- Sync products from a 3rd party service. We want to call a 3rd party service API to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other products should not be updated/persisted) using the `POST /sync`.
 
 - Get the statistics:
 
-  - `GET /purchases/stats/products?from=21-04-2023&to=21-05-2023` should return the products purchased between from: Date and to: Date. from should always be before to. Both dates are formatted in 'dd-MM-yyyy' format
+  - `GET /purchases/stats/products?from=21-04-2023&to=21-05-2023` should return the products purchased between from: Date and to: Date. from should always be before to. Both dates are formatted in 'dd-MM-yyyy' format.
 
-  - `GET /purchases/stats/customers` should return the customers who have not made purchases in the past year
+  - `GET /purchases/stats/customers` should return the customers who have not made purchases in the past year.
 
-## SQL challenge (45 minutes)
+## SQL challenge (40 minutes)
 
 1. Ask Louis for an access to the database server.
 
@@ -83,6 +83,14 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 3. The output of the exercise should be the SQL query itself.
 
 4. (Bonus point), return the criterion column that will tell why this workspace should be deleted
+
+## Architecture challenge (40 minutes)
+
+Currently, our system is utilizing the [HIBP API](https://haveibeenpwned.com/) to fetch details pertaining to data breaches for our employees' email addresses. In order to obtain this data, an API call is made to the HIBP API each time a new email address is added to our platform. 
+
+It should be noted that, based on our subscription plan, HIBP API enacts a rate limit on each API key which stipulates the permissible number of requests that can be made per minute (eg. For the cheapest plan it's 1 request per 6 seconds). 
+
+Based on your knowledge, We need an architectural solution that can adeptly manage this rate limit in scenarios where one or more API keys are employed simultaneously across one or more worker processes. Can you propose a solution that would be capable of navigating this rate limit to maintain optimal system functionality?
 
 ## Debriefing (1 hour)
 
