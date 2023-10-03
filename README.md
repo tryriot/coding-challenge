@@ -82,7 +82,7 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 
 3. The output of the exercise should be the SQL query itself.
 
-4. (Bonus point), return the criterion column that will tell why this workspace should be deleted
+4. (Bonus point), Returns the criterion column showing why this workspace should be deleted.
 
 ## Architecture challenge (40 minutes)
 
