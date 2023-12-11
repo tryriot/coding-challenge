@@ -4,9 +4,9 @@ After each challenge you can take a 10 minutes break 😇
 
 ## Application debugging (1h)
 
-This an REST API created using Hono : https://hono.dev
+This is a REST API created using Hono : https://hono.dev
 
-This app was created with multiple bugs. Your goal is to find and fix the bugs in the App
+This app was created with multiple bugs. Your goal is to fix them.
 
 ## Getting started
 
@@ -38,7 +38,7 @@ In our database we have the following :
 
 - Product
 
-- User
+- Customer
 
 - Purchase
 
@@ -83,14 +83,6 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 3. The output of the exercise should be the SQL query itself.
 
 4. (Bonus point), Returns the criterion column showing why this workspace should be deleted.
-
-## Architecture challenge (40 minutes)
-
-Currently, our system is utilizing the [HIBP API](https://haveibeenpwned.com/) to fetch details pertaining to data breaches for our employees' email addresses. In order to obtain this data, an API call is made to the HIBP API each time a new email address is added to our platform. 
-
-It should be noted that, based on our subscription plan, HIBP API enacts a rate limit on each API key which stipulates the permissible number of requests that can be made per minute (eg. For the cheapest plan it's 1 request per 6 seconds). 
-
-Based on your knowledge, We need an architectural solution that can adeptly manage this rate limit in scenarios where one or more API keys are employed simultaneously across one or more worker processes. Can you propose a solution that would be capable of navigating this rate limit to maintain optimal system functionality?
 
 ## Debriefing (1 hour)
 
