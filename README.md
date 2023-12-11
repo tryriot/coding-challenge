@@ -66,7 +66,7 @@ Your task is to fix all the bugs so application runs as intended. Here is what i
 
   - `GET /purchases/stats/customers` should return the customers who have not made purchases in the past year.
 
-## SQL challenge (40 minutes)
+## SQL challenge (30 minutes)
 
 1. Ask Louis for an access to the database server.
 
