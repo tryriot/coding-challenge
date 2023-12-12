@@ -1,13 +1,15 @@
 import { Handler, Hono } from "hono";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 import { prisma } from "../../utils/db.utils";
 import { StatsPurchaseInput } from "../../types";
 
 const router = new Hono();
 
 const getProductsPurchasedBetween: Handler = async (c) => {
-  const body = c.body as any as StatsPurchaseInput;
-  const { from, to } = body;
+  const { from, to }: StatsPurchaseInput = {
+    from: c.req.query('from'),
+    to: c.req.query('to')
+  }
   const fromDate = dayjs(from).toDate();
   const toDate = dayjs(to).toDate();
 

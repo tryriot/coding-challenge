@@ -1,4 +1,8 @@
 
 
 POST http://0.0.0.0:3000/api/sync
-Accept: application/json
+Content-Type: application/json
+
+{
+    "apiUrl": "https://tidy-chicken-75.deno.dev"
+}

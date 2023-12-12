@@ -30,6 +30,8 @@ This will start the server in watch mode on port 3000
 
 For testing you have `.http` files in `test` folder. Install the VSCode extension `REST Client` https://marketplace.visualstudio.com/items?itemName=humao.rest-client to run them.
 
+![img](https://github.com/tryriot/coding-challenge/blob/main/rest-client-extension.png)
+
 ## App overview :
 
 This app was created to track customer purchases.
@@ -48,17 +50,21 @@ A customer can purchase a product. This will create a new entry in the purchase 
 
 ## Objectives
 
-Your task is to fix all the bugs so application runs as intended. Here is what is expected from the application to do:
+The current codebase contains some bugs and is not production ready. Your task is to implement improvements and discuss potential enhancements and trade-offs.
 
-- Get all the products in the database - `GET /products` returns all the products in the database.
+Here are the specs of this API:
+
+- Get all the products in the database - `GET /products` returns all the products from the database.
 
 - Obtain information about a product using their ID - `GET /products/:id` returns the specific product - If the product is not found, an error is returned with the correct HTTP status code.
 
-- Get all the customers in the database - `GET /customers` returns all the customers in the database. (If this were a production API, what suggestions would you add?).
+- Get all the customers in the database - `GET /customers` returns all the customers in the database.
 
 - Make a purchase using `customerId` and `productId` - `POST /purchases` expects a JSON object `{"customerId": "CUSTOMER_ID", "productId": "PRODUCT_ID"}`
 
-- Sync products from a 3rd party service. We want to call a 3rd party service API to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other products should not be updated/persisted) using the `POST /sync`.
+- Sync products from a 3rd party service. We are calling a 3rd party service API provided as a parameter to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other products should not be updated/persisted) using `apiUrl` (https://tidy-chicken-75.deno.dev) -  `POST /sync`.
+
+
 
 - Get the statistics:
 
