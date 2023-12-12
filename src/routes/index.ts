@@ -2,7 +2,7 @@ import { Hono } from "hono";
 
 import { router as productsRouter } from "./products.route";
 import { router as customersRouter } from "./customers.route";
-import { router as purchasesRouter } from "./products.route";
+import { router as purchasesRouter } from "./purchases";
 import { router as syncRouter } from "./sync.route";
 
 

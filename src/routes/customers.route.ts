@@ -3,14 +3,14 @@ import { prisma } from "../utils/db.utils";
 
 const router = new Hono();
 
-const getCustomers: Handler = (c) => {
-  const products = prisma.product.findMany();
-  return c.json(products);
+const getCustomers: Handler = async (c) => {
+  const customers = await prisma.customer.findMany();
+  return c.json(customers);
 };
 
-const getCustomerPurchaseHistory: Handler = (c) => {
+const getCustomerPurchaseHistory: Handler = async (c) => {
   const id = c.req.param("id");
-  const customer = prisma.customer.findUnique({
+  const customer = await prisma.customer.findUnique({
     where: {
       id,
     },
