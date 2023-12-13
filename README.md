@@ -78,10 +78,6 @@ Here are the specs of this API:
 
 2. Your goal is to write an SQL query to find Riot's inactive workspaces, this query should meet the following criteria:
 
-- The workspace should not be a paid workspace (`stripe_subscription_id != null`)
-
-- 1 year without a user connecting to the workspace (`user_workspaces.user_last_seen`)
-
 - No phishing emails sent for 1 year (`attacks.created_at`)
 
 - No enrolments created for 1 year (`enrolments.created_at`)
