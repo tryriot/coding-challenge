@@ -50,7 +50,7 @@ A customer can purchase a product. This will create a new entry in the purchase 
 
 ## Objectives
 
-The current codebase contains some bugs and is not production ready. Your task is to implement improvements and discuss potential enhancements and trade-offs.
+The current code base has some bugs and is not production ready. Your task will be to implement improvements and discuss potential enhancements and trade-offs to make it production-ready.
 
 Here are the specs of this API:
 
