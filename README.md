@@ -58,13 +58,9 @@ Here are the specs of this API:
 
 - Obtain information about a product using their ID - `GET /products/:id` returns the specific product - If the product is not found, an error is returned with the correct HTTP status code.
 
-- Get all the customers in the database - `GET /customers` returns all the customers in the database.
-
 - Make a purchase using `customerId` and `productId` - `POST /purchases` expects a JSON object `{"customerId": "CUSTOMER_ID", "productId": "PRODUCT_ID"}`
 
 - Sync products from a 3rd party service. We are calling a 3rd party service API provided as a parameter to fetch all the product updates made on their service and sync that information in our database. We want to make sure that we either sync all the data or none (aka if one sync to the database fails the other products should not be updated/persisted) using `apiUrl` (https://tidy-chicken-75.deno.dev) -  `POST /sync`.
-
-
 
 - Get the statistics:
 

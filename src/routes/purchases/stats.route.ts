@@ -25,7 +25,8 @@ const getProductsPurchasedBetween: Handler = async (c) => {
 };
 
 const getCustomersWithNoPurchasesInPastYear: Handler = async (c) => {
-  const customersWithNoPurchasesInPastYear = await prisma.$queryRaw`
+  const days = c.req.query('days');
+  const customersWithNoPurchasesInPastYear = await prisma.$queryRawUnsafe(`
     SELECT
         *
     FROM
@@ -35,8 +36,9 @@ const getCustomersWithNoPurchasesInPastYear: Handler = async (c) => {
             SELECT
                 customerId FROM Purchase
             WHERE
-                purchasedAt < datetime ('now', '-1 year'))
-    `;
+                purchasedAt < (STRFTIME('%s') - ${ days } * 24 * 60 * 60)
+        )
+    `);
 
   return c.json(customersWithNoPurchasesInPastYear);
 };
